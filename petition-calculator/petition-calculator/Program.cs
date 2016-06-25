@@ -76,6 +76,7 @@ namespace petition_calculator
 
         private static void TagsUsing(string[] args)
         {
+            Console.WriteLine("Arguments Used:");
             foreach (var arg in args)
             {
                 if (arg.Contains("-country-top-"))
@@ -148,8 +149,8 @@ namespace petition_calculator
                 var count = 0;
                 foreach (var country in _petition.Countries)
                 {
-
-                        count += country.VoteCount;
+                        if(country.Code != "GB")
+                            count += country.VoteCount;
 
                 }
 

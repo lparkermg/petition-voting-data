@@ -36,15 +36,20 @@ namespace petition_calculator
 
         private static void RunCalculations(string[] args)
         {
+            //TODO: TotalVotes Outside UK
+            GetTotals("outsideUK");
+            //TODO: TotalVotes Inside UK
+            GetTotals("insideUK");
+
             foreach (var arg in args)
             {
                 switch (arg)
                 {
                     case ("-country-top-5"):
-                        Console.WriteLine("Top Five Countries.");
+                        GetTopFive("countries");
                         break;
                     case ("-constit-top-5"):
-                        Console.WriteLine("Top Five Constituencies.");
+                        GetTopFive("constituencies");
                         break;
                     default:
                         break;
@@ -59,6 +64,18 @@ namespace petition_calculator
                 
             }
             else if (ofWhat == "constituencies")
+            {
+                
+            }
+        }
+
+        private static void GetTotals(string where)
+        {
+            if (where == "outsideUK")
+            {
+                
+            }
+            else if (where == "insideUK")
             {
                 
             }

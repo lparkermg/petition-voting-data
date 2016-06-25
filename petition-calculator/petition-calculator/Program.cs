@@ -104,11 +104,13 @@ namespace petition_calculator
                 if (arg.Contains("-country-top-"))
                 {
                     var number = Convert.ToInt32(arg.Remove(0, 13));
+                    Console.WriteLine($"Top {number} Countries:");
                     GetTop("countries",number);
                 }
                 else if (arg.Contains("-constit-top-"))
                 {
                     var number = Convert.ToInt32(arg.Remove(0, 13));
+                    Console.WriteLine($"Top {number} Constituencies:");
                     GetTop("constituencies", number);
                 }
                     
